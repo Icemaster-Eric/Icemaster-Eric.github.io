@@ -8,20 +8,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Raleway&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="index.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <nav>
         <a href="#introduction">Home</a>
-        <a href="#about">Personal Statement</a>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
         <a href="#achievements">Achievements</a>
         <a href="#academic-work">Academic Work</a>
-        <a href="#projects">My Projects</a>
     </nav>
 
     <main>
-        <div id="introduction"></div>
         <section id="intro-section">
+            <div class="scroll-anchor" id="introduction"></div>
             <div id="hero-text">
                 <h3>Hello, I'm</h3>
                 <h1>Eric Li</h1>
@@ -35,31 +36,71 @@
                     <span class="code-ln">3</span>&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-var">self</span><span class="code-op">.</span><span class="code-attr">name</span> <span class="code-op">=</span> <span class="code-str">"Eric Li"</span><br>
                     <span class="code-ln">4</span>&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-var">self</span><span class="code-op">.</span><span class="code-attr">interests</span> <span class="code-op">=</span> [<br>
                     <span class="code-ln">5</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-str">"Programming"</span>,<br>
-                    <span class="code-ln">6</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-str">"AI/Machine Learning"</span>,<br>
+                    <span class="code-ln">6</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-str">"Machine Learning"</span>,<br>
                     <span class="code-ln">7</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-str">"Japanese"</span><br>
-                    <span class="code-ln">8</span>&emsp;&emsp;&emsp;&emsp;&emsp;]
+                    <span class="code-ln">8</span>&emsp;&emsp;&emsp;&emsp;&emsp;]<br>
+                    <span class="code-ln">9</span>&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-var">self</span><span class="code-op">.</span><span class="code-attr">skills</span> <span class="code-op">=</span> [<br>
+                    <span class="code-ln">10</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<span class="code-str">"Frontend/Backend Development"</span>,<br>
+                    <span class="code-ln">11</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<span class="code-str">"Competitive Programming"</span>,<br>
+                    <span class="code-ln">12</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<span class="code-str">"Drinking Coffee"</span><br>
+                    <span class="code-ln">13</span>&emsp;&emsp;&emsp;&emsp;&ensp;]
                 </code>
             </aside>
         </section>
 
-        <div id="about"></div>
         <section id="about-section">
+            <div class="scroll-anchor" id="about"></div>
+            <div id="bg-rotated-rect"></div>
             <h2>About Me</h2>
+            <p>✨ A brief introduction to me ✨</p>
+            <div id="about-content-container">
+                <img src="pfp.jpg" id="about-image">
+                <div id="about-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi scelerisque eu ultrices vitae. Amet venenatis urna cursus eget nunc scelerisque viverra mauris. Egestas sed sed risus pretium.</p>
+                    <p>Risus commodo viverra maecenas accumsan lacus vel. Tincidunt arcu non sodales neque sodales. At tempor commodo ullamcorper a lacus vestibulum. Arcu cursus euismod quis viverra nibh cras.</p>
+                    <a href="#about">Personal Statement ➜</a>
+                </div>
+            </div>
         </section>
 
-        <div id="achievements"></div>
-        <section id="achievements-section" style="height:70vh;">
-            
+        <section id="projects-section">
+            <div class="scroll-anchor" id="projects"></div>
+            <h2>Projects</h2>
+            <p>💻 Some of my programming projects 💻</p>
+            <div id="projects-container">
+                <article>
+                    <iframe src="https://replit.com/@IcemasterEric/Cloth-Simulation-pygame?embed=true&theme=dark" width="600" height="400"></iframe>
+                </article>
+                <article>
+                    <iframe src="https://replit.com/@IcemasterEric/Q-Learning-AI?embed=true&theme=dark" width="600" height="400"></iframe>
+                </article>
+                <article>
+                    <iframe src="https://replit.com/@IcemasterEric/The-ASIAN-Difficulty-Game?embed=true&theme=dark" width="600" height="400"></iframe>
+                </article>
+                <article>
+                    <iframe src="https://replit.com/@IcemasterEric/Evolution?embed=true&theme=dark" width="600" height="400"></iframe>
+                </article>
+            </div>
         </section>
 
-        <div id="academic-work"></div>
-        <section id="academic-section" style="height:70vh;">
-            
+        <section id="achievements-section">
+            <div class="scroll-anchor" id="achievements"></div>
+            <h2>Achievements</h2>
+            <p>🏆 A collection of noteworthy awards and certificates 🏆</p>
+            <div id="achievements-container">
+                <article>
+                    <iframe src="https://wandb.ai/icemastereric/Hackathon/reports/Replit-Hackathon-Winner-Implementing-Q-Learning-from-Scratch--VmlldzozNTMyMjU1"></iframe>
+                    <p>I won Replit's AI Hackathon for the best W&B Report, and earned a hefty sum of $1000. </p>
+                    <a href="https://www.youtube.com/live/_MOAsIiV9VU?si=6dFlo3JD_ln4WplZ&t=390" target="_blank">Awards Ceremony ➜</a>
+                </article>
+            </div>
         </section>
 
-        <div id="projects"></div>
-        <section id="projects-section" style="height:70vh;">
-            
+        <section id="academic-section">
+            <div class="scroll-anchor" id="academic-work"></div>
+            <h2>Academic Work</h2>
+            <p>🎓 Essays, research papers, projects, and presentations 🎓</p>
+            <p>(content yet to be determined)</p>
         </section>
     </main>
 </body>

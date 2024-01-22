@@ -1,6 +1,6 @@
 :root {
     --bg-color: #171717;
-    --secondary-bg-color: #333333;
+    --secondary-bg-color: #292929;
     --text-color: #ffffff;
     --rusty-red: #DA2C43;
     --imperial-red: #ED2939;
@@ -15,7 +15,6 @@ body {
     margin: 0px;
     background-color: var(--bg-color);
     color: var(--text-color);
-    overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,14 +24,28 @@ h1, h2, h3, h4, h5, h6 {
 button {
     font-family: "Raleway", sans-serif;
     color: var(--text-color);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--imperial-red);
 }
 
 nav {
     background: rgba(43, 43, 43, 0.5);
     backdrop-filter: blur(13px);
     -webkit-backdrop-filter: blur(13px);
-    position: sticky;
-    top: 0px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -42,68 +55,4 @@ nav {
 
 nav>a {
     margin: 0px 20px;
-    text-decoration: none;
-    color: var(--text-color);
-    transition: 0.3s color;
 }
-
-nav>a:hover {
-    color: var(--rusty-red);
-}
-
-main {
-    height: calc(100vh - 60px);
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-}
-
-main>section {
-    position: relative;
-    scroll-snap-align: start;
-}
-
-#intro-section {
-    height: calc(100vh - 60px);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-#hero-text>h1 {
-    font-size: 80px;
-}
-
-#hero-text>h2 {
-    font-size: 25px;
-}
-
-#hero-text>h3 {
-    font-size: 20px;
-}
-
-#hero-text>button {
-    margin-top: 20px;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-    padding: 5px 10px;
-    border-radius: 10px;
-}
-
-#code-blob {
-    background-color: var(--secondary-bg-color);
-    padding: 20px;
-    border-radius: 20px;
-}
-
-code {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 18px;
-    line-height: 1.5;
-}
-.code-ln {color: #ababab;}
-.code-kw {color: #ff6161;}
-.code-class {color: #ff6161;}
-.code-attr {color: #ffa500;}
-.code-func {color: #ffdd00;}
-.code-var {color: #fff;}
-.code-str {color: #8fc884;}
-.code-op {color: #17c200;}
